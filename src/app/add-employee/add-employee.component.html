@@ -1,0 +1,177 @@
+<div class="container-xl">
+  <div class="table-responsive">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-6">
+            <h4><b>New Employee</b></h4>
+          </div>
+          <div class="col-sm-6">
+            <a href="#" routerLink="/Home" class="btn btn-success back"
+              ><i class="fas fa-arrow-circle-left"></i> &nbsp;Back</a
+            >
+          </div>
+        </div>
+      </div>
+      <form #employeeForm="ngForm">
+        <div class="table-content">
+          <div class="form-group p-10 row">
+            <div class="col-sm-3">
+              <label for="employe_firstname" class="p-t-b-10"
+                >First Name<span class="requiredStar">*</span></label
+              >
+            </div>
+            <div class="col-sm-9">
+              <input
+                type="text"
+                class="form-control"
+                id="employe_firstname"
+                required
+                maxlength="255"
+                [(ngModel)]="addEmployeeForm.employe_firstname"
+                name="employe_firstname"
+                #employe_firstname="ngModel"
+              />
+              <div
+                *ngIf="employe_firstname.errors && isSubmitted"
+                class="alert alert-danger validationError"
+              >
+                <div [hidden]="!employe_firstname.errors?.['required']">
+                  First Name is required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group p-10 row">
+            <div class="col-sm-3">
+              <label for="employe_lastname" class="p-t-b-10"
+                >Last Name<span class="requiredStar">*</span></label
+              >
+            </div>
+            <div class="col-sm-9">
+              <input
+                type="text"
+                class="form-control"
+                id="employe_lastname"
+                required
+                maxlength="255"
+                [(ngModel)]="addEmployeeForm.employe_lastname"
+                name="employe_lastname"
+                #employe_lastname="ngModel"
+              />
+              <div
+                *ngIf="employe_lastname.errors && isSubmitted"
+                class="alert alert-danger validationError"
+              >
+                <div [hidden]="!employe_lastname.errors?.['required']">
+                  Last Name is required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group p-10 row">
+            <div class="col-sm-3">
+              <label class="p-t-b-10"
+                >employe_email<span class="requiredStar">*</span></label
+              >
+            </div>
+            <div class="col-sm-9">
+              <input
+                type="text"
+                class="form-control"
+                id="employe_email"
+                required
+                maxlength="255"
+                [(ngModel)]="addEmployeeForm.employe_email"
+                name="employe_email"
+                #employe_email="ngModel"
+                pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9]{2,3}$"
+              />
+              <div
+                *ngIf="employe_email.errors && isSubmitted"
+                class="alert alert-danger validationError"
+              >
+                <div [hidden]="!employe_email.errors?.['required']">
+                  employe_email is required
+                </div>
+                <div
+                  [hidden]="!employe_email.errors?.['touched'] && !employe_email.errors?.['pattern']"
+                >
+                  employe_email is invalid
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group p-10 row">
+            <div class="col-sm-3">
+              <label class="p-t-b-10"
+                >employe_address<span class="requiredStar">*</span></label
+              >
+            </div>
+            <div class="col-sm-9">
+              <textarea
+                class="form-control"
+                id="employe_address"
+                required
+                [(ngModel)]="addEmployeeForm.employe_address"
+                name="employe_address"
+                #employe_address="ngModel"
+              >
+></textarea
+              >
+              <div
+                *ngIf="employe_address.errors && isSubmitted"
+                class="alert alert-danger validationError"
+              >
+                <div [hidden]="!employe_address.errors?.['required']">
+                  employe_address is required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group p-10 row">
+            <div class="col-sm-3">
+              <label class="p-t-b-10"
+                >employe_phone<span class="requiredStar">*</span></label
+              >
+            </div>
+            <div class="col-sm-9">
+              <input
+                type="text"
+                class="form-control"
+                id="employe_phone"
+                required
+                maxlength="10"
+                [(ngModel)]="addEmployeeForm.employe_phone"
+                name="employe_phone"
+                #employe_phone="ngModel"
+                pattern="^\d{3}\d{3}\d{4}$"
+              />
+              <div
+                *ngIf="employe_phone.errors && isSubmitted"
+                class="alert alert-danger validationError"
+              >
+                <div [hidden]="!employe_phone.errors?.['required']">
+                  employe_phone is required
+                </div>
+                <div
+                  [hidden]="!employe_phone.errors?.['touched'] && !employe_phone.errors?.['pattern']"
+                >
+                  employe_phone is invalid
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-footer">
+          <button
+            class="btn btn-success"
+            (click)="AddEmployee(employeeForm.form.valid)"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
