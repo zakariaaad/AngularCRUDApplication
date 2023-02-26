@@ -22,12 +22,12 @@ You have 2 separate folder
 
 BACKEND is developped by Express JS (Node)
 
-you have to run this commmand in your CMD to install node modules :
+!! you have to run this commmand in your CMD to install node modules :
 
 npm install
 
 FRONTEND is devlopped by Angular Framework 
 
-you have to run this commmand in your CMD to install node modules :
+!! you have to run this commmand in your CMD to install node modules :
 
 npm install
