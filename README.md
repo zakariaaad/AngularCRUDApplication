@@ -9,4 +9,6 @@ Architecture Database :
 Table Employee_members
 you have to import database in phpmyadmin
 
-This project is for managin employee & particing the angular framework
+This project is for managing employee & particing the angular framework
+
+ADD - View - GET LIST 
