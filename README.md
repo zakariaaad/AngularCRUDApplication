@@ -1,33 +1,19 @@
-# CRUDApplication
+# CRUD Application
+This repo is for a sample Crud Project for managing employees of a company & testing Angular Framework
+<br>
+You will find 2 separate folder
+<br>
+Architecture used : Backend API - Frontend
+<br>
+Tech Used : (Angular & Nodejs with express + Mysql)
+<br>
+### `MySQL configuration`
+You have to import database in phpmyadmin<br>
+Module developped specificly for employee management application<br>
+
+### you have to run this commmand in your CMD to install node modules  !! 
+For Backend & Frontend
+<br>
+### npm install
 
 
-This my first CRUD Project
-
-I have used a Backend - Frontend Architecture (Angular & Nodejs with express + Mysql)
-
-Architecture Database :
-
-Table Employee_members
-
-
-you have to import database in phpmyadmin
-
-This project is for managing employee & particing the angular framework
-
-Module & Fontionnality developped is :
-
-ADD Employee - View detail Employee - GET LIST Employee 
-
-You have 2 separate folder
-
-BACKEND is developped by Express JS (Node)
-
-!! you have to run this commmand in your CMD to install node modules :
-
-npm install
-
-FRONTEND is devlopped by Angular Framework 
-
-!! you have to run this commmand in your CMD to install node modules :
-
-npm install
