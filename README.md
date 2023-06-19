@@ -1,4 +1,4 @@
-# CRUD Application
+# Crud Application
 This repo is for a sample Crud Project for managing employees of a company & testing Angular Framework
 <br>
 You will find 2 separate folder
