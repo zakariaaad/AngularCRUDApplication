@@ -8,7 +8,8 @@ Architecture used : Backend API - Frontend
 Tech Used : (Angular & Nodejs with express + Mysql)
 <br>
 ### `MySQL configuration`
-You have to import database in phpmyadmin<br>
+You will find a file employee.sql<br>
+You have to import this file in Mysql database using PhpMyAdmin<br>
 Module developped specificly for employee management application<br>
 
 ### you have to run this commmand in your CMD to install node modules  !! 
